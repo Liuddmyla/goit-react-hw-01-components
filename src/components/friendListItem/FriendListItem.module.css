@@ -1,0 +1,18 @@
+.status{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: tomato;
+   
+}
+
+.off-status{
+    background-color: green;  
+}
+
+.avatar{
+    width: 50px;
+    border: 2px solid rgba(68, 64, 247, 0.7);
+    border-radius: 10%;
+    padding: 2px;
+}
