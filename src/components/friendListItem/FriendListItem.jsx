@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import css from './FriendListItem.module.css';
 import clsx from "clsx";
+import css from './FriendListItem.module.css';
 
-export const Friend = ({ friend: { avatar, name, isOnline } }) => {  
+export const Friend = ({ friend: { avatar, name, isOnline} }) => {  
     return (
-      <>
+        <>
           <span className={clsx(css.status, isOnline && css['off-status'])}></span>
           <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
           <p className={css.name}>{name}</p>
-      </>
+        </>
   )  
 }
 
