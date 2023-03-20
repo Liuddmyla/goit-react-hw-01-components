@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export const Transaction = ({item:{type, amount, currency}}) => {
      return (
@@ -10,11 +10,10 @@ export const Transaction = ({item:{type, amount, currency}}) => {
     )
 }
 
-// Transaction.propTypes = {
-//       item: PropTypes.exact({
-//       type: PropTypes.string.isRequired,
-//       id: PropTypes.string.isRequired,
-//       amount: PropTypes.string.isRequired,
-//       currency: PropTypes.string.isRequired,
-//   })     
-// }
+Transaction.propTypes = {
+      item: PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+  })     
+}
