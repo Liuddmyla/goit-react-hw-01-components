@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import clsx from "clsx";
 import css from './FriendListItem.module.css';
 
@@ -12,11 +12,10 @@ export const Friend = ({ friend: { avatar, name, isOnline} }) => {
   )  
 }
 
-// Friend.propTypes = {
-//     friend: PropTypes.exact({
-//         name: PropTypes.string.isRequired,
-//         id: PropTypes.number.isRequired,
-//         isOnline: PropTypes.bool.isRequired,
-//         avatar: PropTypes.string.isRequired,
-//     })   
-// }
+Friend.propTypes = {
+    friend: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        isOnline: PropTypes.bool.isRequired,
+        avatar: PropTypes.string.isRequired,
+    })   
+}

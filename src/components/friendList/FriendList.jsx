@@ -7,18 +7,19 @@ export const FriendList = ({friends}) => {
         <ul className={css['friend-list']}>
             {friends.map(friend => ( 
                 <li key={friend.id} className={css.item}>
-                    <Friend friend={friend} /> 
+                    <Friend friend={friend}
+                        key={friend.id}
+                    /> 
                 </li>    
             ))}
         </ul>
     )
 }
 
-Friend.propTypes = {
-    friend: PropTypes.exact({
-        name: PropTypes.string.isRequired,
-        id: PropTypes.number.isRequired,
-        isOnline: PropTypes.bool.isRequired,
-        avatar: PropTypes.string.isRequired,
-    })   
+FriendList.propTypes = {
+    friends: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+        })       
+    )   
 }
